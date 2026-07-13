@@ -243,5 +243,94 @@ export const PRODUCTS: Product[] = [
       id: "Aplikasikan tipis pada area wajah yang bermasalah setelah membersihkan kulit.",
       en: "Apply a thin layer to problem areas after cleansing.",
     },
+
+  
+      //awal tambahan produk
+  {
+    id: "were-acne-lotion",
+    brand: "were",
+    image: acnelotion,
+    name: "Were Acne Lotion",
+    category: { id: "Kosmetik", en: "Cosmetics" },
+    short: {
+      id: "Perawatan wajah lembut untuk kulit rentan berjerawat.",
+      en: "Gentle facial care for acne-prone skin.",
+    },
+    description: {
+      id: "Were Acne Lotion diformulasikan untuk membantu menenangkan kulit berjerawat, mengurangi kemerahan, dan menjaga kelembapan alami wajah.",
+      en: "Were Acne Lotion is formulated to help calm acne-prone skin, reduce redness, and preserve the skin's natural moisture.",
+    },
+    benefits: {
+      id: ["Membantu meredakan jerawat", "Menenangkan kulit", "Menjaga kelembapan"],
+      en: ["Helps calm breakouts", "Soothes the skin", "Maintains hydration"],
+    },
+    features: {
+      id: ["Formula ringan", "Cepat menyerap", "Cocok untuk penggunaan harian"],
+      en: ["Lightweight formula", "Fast absorbing", "Suitable for daily use"],
+    },
+    ingredients: { id: "Detail akan diperbarui.", en: "Details will be updated." },
+    howto: {
+      id: "Aplikasikan tipis pada area wajah yang bermasalah setelah membersihkan kulit.",
+      en: "Apply a thin layer to problem areas after cleansing.",
+    },
+
+        
+  {
+    id: "were-acne-lotion",
+    brand: "were",
+    image: acnelotion,
+    name: "Were Acne Lotion",
+    category: { id: "Kosmetik", en: "Cosmetics" },
+    short: {
+      id: "Perawatan wajah lembut untuk kulit rentan berjerawat.",
+      en: "Gentle facial care for acne-prone skin.",
+    },
+    description: {
+      id: "Were Acne Lotion diformulasikan untuk membantu menenangkan kulit berjerawat, mengurangi kemerahan, dan menjaga kelembapan alami wajah.",
+      en: "Were Acne Lotion is formulated to help calm acne-prone skin, reduce redness, and preserve the skin's natural moisture.",
+    },
+    benefits: {
+      id: ["Membantu meredakan jerawat", "Menenangkan kulit", "Menjaga kelembapan"],
+      en: ["Helps calm breakouts", "Soothes the skin", "Maintains hydration"],
+    },
+    features: {
+      id: ["Formula ringan", "Cepat menyerap", "Cocok untuk penggunaan harian"],
+      en: ["Lightweight formula", "Fast absorbing", "Suitable for daily use"],
+    },
+    ingredients: { id: "Detail akan diperbarui.", en: "Details will be updated." },
+    howto: {
+      id: "Aplikasikan tipis pada area wajah yang bermasalah setelah membersihkan kulit.",
+      en: "Apply a thin layer to problem areas after cleansing.",
+    },
+
+    
+  {
+    id: "were-acne-lotion",
+    brand: "were",
+    image: acnelotion,
+    name: "Were Acne Lotion",
+    category: { id: "Kosmetik", en: "Cosmetics" },
+    short: {
+      id: "Perawatan wajah lembut untuk kulit rentan berjerawat.",
+      en: "Gentle facial care for acne-prone skin.",
+    },
+    description: {
+      id: "Were Acne Lotion diformulasikan untuk membantu menenangkan kulit berjerawat, mengurangi kemerahan, dan menjaga kelembapan alami wajah.",
+      en: "Were Acne Lotion is formulated to help calm acne-prone skin, reduce redness, and preserve the skin's natural moisture.",
+    },
+    benefits: {
+      id: ["Membantu meredakan jerawat", "Menenangkan kulit", "Menjaga kelembapan"],
+      en: ["Helps calm breakouts", "Soothes the skin", "Maintains hydration"],
+    },
+    features: {
+      id: ["Formula ringan", "Cepat menyerap", "Cocok untuk penggunaan harian"],
+      en: ["Lightweight formula", "Fast absorbing", "Suitable for daily use"],
+    },
+    ingredients: { id: "Detail akan diperbarui.", en: "Details will be updated." },
+    howto: {
+      id: "Aplikasikan tipis pada area wajah yang bermasalah setelah membersihkan kulit.",
+      en: "Apply a thin layer to problem areas after cleansing.",
+    },
+          //akhir tambahan produk
   },
 ];

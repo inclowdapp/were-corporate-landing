@@ -89,6 +89,14 @@ export const translations = {
     tag: { id: "Galeri", en: "Gallery" },
     title: { id: "Momen, produk, dan aktivitas kami", en: "Our moments, products, and activities" },
   },
+  video: {
+    tag: { id: "Video Perusahaan", en: "Company Video" },
+    title: { id: "Kenali Were lebih dekat", en: "Get to know Were" },
+    desc: {
+      id: "Cuplikan perjalanan, riset, dan komitmen kami untuk menghadirkan produk terbaik.",
+      en: "A glimpse of our journey, research, and commitment to delivering the finest products.",
+    },
+  },
   contact: {
     tag: { id: "Kontak", en: "Get in Touch" },
     title: { id: "Kami siap mendengarkan Anda", en: "We're here to listen" },

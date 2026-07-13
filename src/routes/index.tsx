@@ -28,6 +28,7 @@ import { Footer } from "@/components/site/Footer";
 import { ProductModal } from "@/components/site/ProductModal";
 import { Lightbox } from "@/components/site/Lightbox";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { CompanyVideo } from "@/components/site/CompanyVideo";
 
 import heroBg from "@/assets/hero-bg.jpg";
 import aboutLab from "@/assets/about-lab.jpg";
@@ -55,6 +56,7 @@ function SitePage() {
       <main>
         <Hero />
         <About />
+        <CompanyVideo />
         <Brands setBrandFilter={setBrandFilter} />
         <Products
           brandFilter={brandFilter}

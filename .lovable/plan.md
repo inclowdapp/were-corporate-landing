@@ -1,20 +1,52 @@
-## Perubahan yang akan dilakukan
+## Konteks
 
-### 1. Ganti gambar produk Meguaz
-- Upload `user-uploads://Meguaz.png` ke Lovable Assets CDN via `lovable-assets create` → hasilkan `src/assets/product-meguaz.png.asset.json`.
-- Hapus file lama `src/assets/product-meguaz.jpg` (asset pointer JSON lama, jika ada).
-- Update `src/data/products.ts`: ubah import `meguaz` untuk membaca `.asset.json` baru, dan gunakan `meguaz.url` pada field `image` produk Meguaz.
-- Produk lain tidak diubah (masih pakai gambar existing).
+Semua file gambar & video dari repo GitHub (`inclowdapp/were-corporate-landing`) sebenarnya sudah tersinkron ke `src/assets/`:
 
-### 2. Tambah section Video Company Profile
-- Buat komponen baru `src/components/site/CompanyVideo.tsx`:
-  - Section full-width dengan judul bilingual (ID/EN via `useLang`) — mis. "Company Profile" / "Profil Perusahaan".
-  - Player HTML5 `<video>` responsif (aspect 16:9, rounded, shadow, poster fallback pakai `hero-bg.jpg`) dengan `controls`, `preload="metadata"`, `playsInline`.
-  - Sumber video pakai URL placeholder yang mudah diganti nanti — konstanta `COMPANY_VIDEO_URL` di atas komponen, default ke sample publik (`https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4`). Komentar jelas: "Ganti URL ini dengan video company profile Anda".
-  - Animasi masuk halus pakai `motion/react` (fade + slide up), konsisten dengan komponen lain.
-- Sisipkan `<CompanyVideo />` di `src/routes/index.tsx` di posisi yang natural (antara section About dan Products, atau sebelum Footer — akan diletakkan setelah Hero/About agar terlihat prominent).
-- Tambah string i18n bila diperlukan di `src/i18n/translations.ts` (judul & subjudul section video).
+- `meguaz.png`, `asmaraloka.png`, `coco-crispy-pumkin-*.png` (3 varian), `nutralatte-rempah.png`, `vitaluxe-madu-rempah.png`, `nutrabite-hard-candy-rempah.png`, `nutrabite-milk-candy-spirulina.png`, `product-acnelotion.jpg`
+- `video-company.mp4` (17 MB) — sudah ada, tapi belum dipakai oleh komponen video
 
-### Catatan
-- Tidak mengubah logic bisnis lain, styling global, atau data produk selain Meguaz.
-- Video di-embed sebagai URL eksternal (bukan file di repo) supaya ringan dan mudah diganti — user cukup ubah 1 konstanta URL nanti.
+Masalah saat ini: **build gagal** dan gambar/video tidak muncul karena tiga bug di kode, bukan karena file gambarnya kurang.
+
+## Bug yang perlu diperbaiki
+
+### 1. `src/data/products.ts` — parse error (build fail)
+
+File punya beberapa blok "were-acne-lotion" duplikat yang ditulis **di dalam** objek produk sebelumnya (tanda `//awal tambahan produk` … `//akhir tambahan produk`), sehingga kurung kurawal tidak seimbang dan Vite gagal parse di baris 331. Hasilnya seluruh halaman produk crash.
+
+Perbaikan: hapus semua blok duplikat itu; sisakan satu entri `were-acne-lotion` yang valid. Tutup array `PRODUCTS` dengan benar (`}]`).
+
+### 2. `src/data/products.ts` — import Meguaz salah bentuk
+
+Sekarang:
+```ts
+import meguazAsset from "@/assets/meguaz.png";
+const meguaz = meguazAsset.url;
+```
+`meguaz.png` adalah file biner asli (bukan `.asset.json`), jadi Vite mengembalikan **string URL** langsung, bukan objek dengan `.url`. Akibatnya `meguaz` = `undefined` dan gambar Meguaz kosong.
+
+Perbaikan: ubah menjadi `import meguaz from "@/assets/meguaz.png";` seperti produk lain, lalu hapus baris `const meguaz = meguazAsset.url;`. Sekaligus hapus pointer usang `src/assets/product-meguaz.png.asset.json` (menunjuk asset lama & tidak dipakai lagi).
+
+### 3. `src/components/site/CompanyVideo.tsx` — URL video hanya string alias
+
+Sekarang:
+```ts
+const COMPANY_VIDEO_URL = "@/assets/video-company.mp4";
+```
+Ini string literal biasa; alias `@/` tidak diresolusi di runtime, browser akan minta URL harfiah `@/assets/video-company.mp4` → 404, video tidak jalan.
+
+Perbaikan: impor sebagai modul Vite supaya jadi URL asli:
+```ts
+import companyVideo from "@/assets/video-company.mp4";
+```
+lalu pakai `companyVideo` di `<source src={...}>` dan pada `key`. Poster tetap `hero-bg.jpg`.
+
+## Yang **tidak** diubah
+
+- Struktur komponen, styling, i18n, dan section lain tetap.
+- Data produk lain (nama, deskripsi, benefit) tidak disentuh — hanya blok duplikat sampah yang dibuang.
+- Tidak menambah/menghapus produk selain merapikan duplikat "Were Acne Lotion".
+
+## Verifikasi setelah build
+
+- `bun run build` sukses.
+- Halaman `/` menampilkan gambar Meguaz + semua produk lain, section Company Video memutar `video-company.mp4` dengan poster hero.

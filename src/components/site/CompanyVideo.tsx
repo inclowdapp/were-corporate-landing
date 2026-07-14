@@ -1,11 +1,10 @@
 import { motion } from "motion/react";
 import { useLang } from "@/i18n/LanguageProvider";
 import heroBg from "@/assets/hero-bg.jpg";
+import companyVideo from "@/assets/video-company.mp4";
 
-// TODO: Ganti URL ini dengan video company profile resmi Were.
-// Bisa berupa file .mp4 yang di-upload ke Lovable Assets, atau URL publik apa pun.
-const COMPANY_VIDEO_URL =
-  "@/assets/video-company.mp4";
+// Ganti file `src/assets/video-company.mp4` untuk memperbarui video company profile.
+const COMPANY_VIDEO_URL = companyVideo;
 
 export function CompanyVideo() {
   const { lang, T } = useLang();

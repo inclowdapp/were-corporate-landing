@@ -5,7 +5,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 // TODO: Ganti URL ini dengan video company profile resmi Were.
 // Bisa berupa file .mp4 yang di-upload ke Lovable Assets, atau URL publik apa pun.
 const COMPANY_VIDEO_URL =
-  "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+  "@/assets/video-company.mp4";
 
 export function CompanyVideo() {
   const { lang, T } = useLang();

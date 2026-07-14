@@ -272,7 +272,7 @@ export const PRODUCTS: Product[] = [
     howto: { id: "Nikmati kapan saja.", en: "Enjoy any time." },
   },
   {
-    id: "nutrabite",
+    id: "nutrabite-milk",
     brand: "nutraluxe",
     image: nutrabitemilk,
     name: "Nutrabite Milk Candy Spirulina",

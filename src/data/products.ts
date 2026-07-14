@@ -1,9 +1,13 @@
 import meguazAsset from "@/assets/meguaz.png";
 import asmaraloka from "@/assets/asmaraloka.png";
-import cococrispy from "@/assets/product-cococrispy.jpg";
-import nutralatte from "@/assets/product-nutralatte.jpg";
-import vitaluxe from "@/assets/product-vitaluxe.jpg";
-import nutrabite from "@/assets/product-nutrabite.jpg";
+import cococrispyori from "@/assets/coco-crispy-pumkin-ori.png";
+import cococrispycoklat from "@/assets/coco-crispy-pumkin-coklat.png";
+import cococrispyubi from "@/assets/coco-crispy-pumkin-ubi-ungu.png";
+import nutralatterempah from "@/assets/nutralatte-rempah.png";
+import vitaluxemadu from "@/assets/vitaluxe-madu-rempah.png";
+import nutrabitehard from "@/assets/nutrabite-hard-candy-rempah.png";
+import nutrabitemilk from "@/assets/nutrabite-milk-candy-spirulina.png";
+
 import acnelotion from "@/assets/product-acnelotion.jpg";
 
 const meguaz = meguazAsset.url;
@@ -114,10 +118,10 @@ export const PRODUCTS: Product[] = [
     howto: { id: "Ikuti petunjuk pada kemasan.", en: "Follow the instructions on the package." },
   },
   {
-    id: "coco-crispy",
+    id: "coco-crispy-ori",
     brand: "nutraluxe",
-    image: cococrispy,
-    name: "Coco Crispy",
+    image: cococrispyori,
+    name: "Coco Crispy Pumkin Ori",
     category: { id: "Pangan Fungsional", en: "Functional Food" },
     short: {
       id: "Camilan renyah dari kelapa asli, ringan namun mengenyangkan.",
@@ -138,11 +142,64 @@ export const PRODUCTS: Product[] = [
     ingredients: { id: "Kelapa, gula alami, garam laut.", en: "Coconut, natural sugar, sea salt." },
     howto: { id: "Siap santap kapan saja.", en: "Ready to eat any time." },
   },
+
+   {
+    id: "coco-crispy-pumkin-coklat",
+    brand: "nutraluxe",
+    image: cococrispycoklat,
+    name: "Coco Crispy Pumkin Coklat",
+    category: { id: "Pangan Fungsional", en: "Functional Food" },
+    short: {
+      id: "Camilan renyah dari kelapa asli, ringan namun mengenyangkan.",
+      en: "Crunchy snack from real coconut — light yet satisfying.",
+    },
+    description: {
+      id: "Coco Crispy adalah camilan renyah berbahan dasar kelapa pilihan, cocok untuk teman ngemil sehat sepanjang hari.",
+      en: "Coco Crispy is a crunchy snack made from selected coconut — perfect for healthy everyday snacking.",
+    },
+    benefits: {
+      id: ["Sumber serat alami", "Ringan namun mengenyangkan", "Tanpa MSG"],
+      en: ["Natural fiber source", "Light yet satisfying", "No MSG"],
+    },
+    features: {
+      id: ["Bahan alami", "Kemasan praktis", "Rasa lezat"],
+      en: ["Natural ingredients", "Convenient pack", "Delicious taste"],
+    },
+    ingredients: { id: "Kelapa, gula alami, garam laut.", en: "Coconut, natural sugar, sea salt." },
+    howto: { id: "Siap santap kapan saja.", en: "Ready to eat any time." },
+  },
+
+  {
+    id: "coco-crispy-pumkin-ubi-ungu",
+    brand: "nutraluxe",
+    image: cococrispyubi,
+    name: "Coco Crispy Pumkin Coklat",
+    category: { id: "Pangan Fungsional", en: "Functional Food" },
+    short: {
+      id: "Camilan renyah dari kelapa asli, ringan namun mengenyangkan.",
+      en: "Crunchy snack from real coconut — light yet satisfying.",
+    },
+    description: {
+      id: "Coco Crispy adalah camilan renyah berbahan dasar kelapa pilihan, cocok untuk teman ngemil sehat sepanjang hari.",
+      en: "Coco Crispy is a crunchy snack made from selected coconut — perfect for healthy everyday snacking.",
+    },
+    benefits: {
+      id: ["Sumber serat alami", "Ringan namun mengenyangkan", "Tanpa MSG"],
+      en: ["Natural fiber source", "Light yet satisfying", "No MSG"],
+    },
+    features: {
+      id: ["Bahan alami", "Kemasan praktis", "Rasa lezat"],
+      en: ["Natural ingredients", "Convenient pack", "Delicious taste"],
+    },
+    ingredients: { id: "Kelapa, gula alami, garam laut.", en: "Coconut, natural sugar, sea salt." },
+    howto: { id: "Siap santap kapan saja.", en: "Ready to eat any time." },
+  },
+  
   {
     id: "nutralatte",
     brand: "nutraluxe",
-    image: nutralatte,
-    name: "Nutralatte",
+    image: nutralatterempah,
+    name: "Nutralatte Rempah",
     category: { id: "Pangan Fungsional", en: "Functional Food" },
     short: {
       id: "Latte premium berbasis nabati dengan cita rasa mewah.",
@@ -169,8 +226,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "vitaluxe",
     brand: "nutraluxe",
-    image: vitaluxe,
-    name: "Vitaluxe",
+    image: vitaluxemadu,
+    name: "Vitaluxe Madu Rempah",
     category: { id: "Pangan Fungsional", en: "Functional Food" },
     short: {
       id: "Suplemen fungsional untuk mendukung kesehatan sehari-hari.",
@@ -194,8 +251,33 @@ export const PRODUCTS: Product[] = [
   {
     id: "nutrabite",
     brand: "nutraluxe",
-    image: nutrabite,
-    name: "NutraBite",
+    image: nutrabitehard,
+    name: "Nutrabite Hard Candy Rempah",
+    category: { id: "Pangan Fungsional", en: "Functional Food" },
+    short: {
+      id: "Bar nutrisi praktis untuk mendampingi hari sibuk Anda.",
+      en: "Practical nutrition bar to power your busy day.",
+    },
+    description: {
+      id: "NutraBite adalah bar nutrisi seimbang yang dibuat dari bahan alami, cocok sebagai camilan sehat di sela aktivitas.",
+      en: "NutraBite is a balanced nutrition bar made from natural ingredients — the perfect healthy snack between activities.",
+    },
+    benefits: {
+      id: ["Sumber energi seimbang", "Mudah dibawa", "Rasa lezat"],
+      en: ["Balanced energy source", "Easy to carry", "Delicious taste"],
+    },
+    features: {
+      id: ["Bahan alami", "Kemasan praktis", "Ideal untuk perjalanan"],
+      en: ["Natural ingredients", "Convenient pack", "Ideal on-the-go"],
+    },
+    ingredients: { id: "Detail akan diperbarui.", en: "Details will be updated." },
+    howto: { id: "Nikmati kapan saja.", en: "Enjoy any time." },
+  },
+  {
+    id: "nutrabite",
+    brand: "nutraluxe",
+    image: nutrabitemilk,
+    name: "Nutrabite Milk Candy Spirulina",
     category: { id: "Pangan Fungsional", en: "Functional Food" },
     short: {
       id: "Bar nutrisi praktis untuk mendampingi hari sibuk Anda.",

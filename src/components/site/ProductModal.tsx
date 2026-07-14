@@ -48,10 +48,11 @@ export function ProductModal({ product, onClose }: Props) {
             className="relative w-full max-w-5xl overflow-hidden rounded-t-3xl bg-card text-card-foreground shadow-2xl sm:rounded-3xl"
             onClick={(e) => e.stopPropagation()}
           >
+            <div className="mx-auto mt-2 h-1.5 w-12 rounded-full bg-foreground/20 sm:hidden" aria-hidden="true" />
             <button
               onClick={onClose}
               aria-label={T.products.close[lang]}
-              className="absolute right-4 top-4 z-10 grid h-11 w-11 place-items-center rounded-full bg-background/90 text-foreground shadow-md ring-1 ring-border transition hover:bg-primary hover:text-primary-foreground"
+              className="fixed right-4 top-4 z-20 grid h-11 w-11 place-items-center rounded-full bg-background text-foreground shadow-lg ring-1 ring-border transition hover:bg-primary hover:text-primary-foreground sm:absolute"
             >
               <X className="h-5 w-5" />
             </button>

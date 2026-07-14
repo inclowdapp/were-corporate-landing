@@ -1,52 +1,14 @@
-## Konteks
+# Fix mobile close button visibility in ProductModal
 
-Semua file gambar & video dari repo GitHub (`inclowdapp/were-corporate-landing`) sebenarnya sudah tersinkron ke `src/assets/`:
+**Problem:** On mobile, the product detail modal slides up from the bottom (`items-end`, `rounded-t-3xl`). The close "X" button is absolutely positioned at `top-4 right-4` of the modal container — which sits over the product image at the very top of the sheet. On small screens this area is often above the fold or blends into the image, so users can't find how to close it.
 
-- `meguaz.png`, `asmaraloka.png`, `coco-crispy-pumkin-*.png` (3 varian), `nutralatte-rempah.png`, `vitaluxe-madu-rempah.png`, `nutrabite-hard-candy-rempah.png`, `nutrabite-milk-candy-spirulina.png`, `product-acnelotion.jpg`
-- `video-company.mp4` (17 MB) — sudah ada, tapi belum dipakai oleh komponen video
+**Fix (single file: `src/components/site/ProductModal.tsx`):**
 
-Masalah saat ini: **build gagal** dan gambar/video tidak muncul karena tiga bug di kode, bukan karena file gambarnya kurang.
+1. On mobile, pin the close button to the viewport (fixed) instead of the modal top, so it's always visible regardless of scroll position inside the sheet. On `sm+` keep current absolute positioning inside the card.
+   - Change classes from `absolute right-4 top-4 …` to `fixed right-4 top-4 sm:absolute …` with a higher `z-20` and stronger contrast (solid background + ring + shadow) so it stands out against product photos.
 
-## Bug yang perlu diperbaiki
+2. Add a small visual grab handle at the top of the mobile sheet (`h-1.5 w-12 rounded-full bg-foreground/20 mx-auto mt-2 sm:hidden`) so it's clear the panel is a dismissible sheet.
 
-### 1. `src/data/products.ts` — parse error (build fail)
+3. Also allow closing by tapping the backdrop (already works) — no change, but ensure the sheet has a bit of top padding on mobile so the fixed X doesn't overlap the category chip when scrolled.
 
-File punya beberapa blok "were-acne-lotion" duplikat yang ditulis **di dalam** objek produk sebelumnya (tanda `//awal tambahan produk` … `//akhir tambahan produk`), sehingga kurung kurawal tidak seimbang dan Vite gagal parse di baris 331. Hasilnya seluruh halaman produk crash.
-
-Perbaikan: hapus semua blok duplikat itu; sisakan satu entri `were-acne-lotion` yang valid. Tutup array `PRODUCTS` dengan benar (`}]`).
-
-### 2. `src/data/products.ts` — import Meguaz salah bentuk
-
-Sekarang:
-```ts
-import meguazAsset from "@/assets/meguaz.png";
-const meguaz = meguazAsset.url;
-```
-`meguaz.png` adalah file biner asli (bukan `.asset.json`), jadi Vite mengembalikan **string URL** langsung, bukan objek dengan `.url`. Akibatnya `meguaz` = `undefined` dan gambar Meguaz kosong.
-
-Perbaikan: ubah menjadi `import meguaz from "@/assets/meguaz.png";` seperti produk lain, lalu hapus baris `const meguaz = meguazAsset.url;`. Sekaligus hapus pointer usang `src/assets/product-meguaz.png.asset.json` (menunjuk asset lama & tidak dipakai lagi).
-
-### 3. `src/components/site/CompanyVideo.tsx` — URL video hanya string alias
-
-Sekarang:
-```ts
-const COMPANY_VIDEO_URL = "@/assets/video-company.mp4";
-```
-Ini string literal biasa; alias `@/` tidak diresolusi di runtime, browser akan minta URL harfiah `@/assets/video-company.mp4` → 404, video tidak jalan.
-
-Perbaikan: impor sebagai modul Vite supaya jadi URL asli:
-```ts
-import companyVideo from "@/assets/video-company.mp4";
-```
-lalu pakai `companyVideo` di `<source src={...}>` dan pada `key`. Poster tetap `hero-bg.jpg`.
-
-## Yang **tidak** diubah
-
-- Struktur komponen, styling, i18n, dan section lain tetap.
-- Data produk lain (nama, deskripsi, benefit) tidak disentuh — hanya blok duplikat sampah yang dibuang.
-- Tidak menambah/menghapus produk selain merapikan duplikat "Were Acne Lotion".
-
-## Verifikasi setelah build
-
-- `bun run build` sukses.
-- Halaman `/` menampilkan gambar Meguaz + semua produk lain, section Company Video memutar `video-company.mp4` dengan poster hero.
+**Out of scope:** No changes to Lightbox, data, i18n, or layout beyond the close-button positioning and the grab handle.

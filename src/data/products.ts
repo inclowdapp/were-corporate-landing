@@ -1,4 +1,4 @@
-import meguazAsset from "@/assets/meguaz.png";
+import meguaz from "@/assets/meguaz.png";
 import asmaraloka from "@/assets/asmaraloka.png";
 import cococrispyori from "@/assets/coco-crispy-pumkin-ori.png";
 import cococrispycoklat from "@/assets/coco-crispy-pumkin-coklat.png";
@@ -9,8 +9,6 @@ import nutrabitehard from "@/assets/nutrabite-hard-candy-rempah.png";
 import nutrabitemilk from "@/assets/nutrabite-milk-candy-spirulina.png";
 
 import acnelotion from "@/assets/product-acnelotion.jpg";
-
-const meguaz = meguazAsset.url;
 
 export type BrandKey = "bioherluxe" | "nutraluxe" | "were";
 

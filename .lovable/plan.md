@@ -1,14 +1,30 @@
-# Fix mobile close button visibility in ProductModal
+# Sinkronisasi Produk dengan Product_Were.docx
 
-**Problem:** On mobile, the product detail modal slides up from the bottom (`items-end`, `rounded-t-3xl`). The close "X" button is absolutely positioned at `top-4 right-4` of the modal container — which sits over the product image at the very top of the sheet. On small screens this area is often above the fold or blends into the image, so users can't find how to close it.
+Semua perubahan hanya di `src/data/products.ts`. Foto produk yang sudah ada tidak diubah.
 
-**Fix (single file: `src/components/site/ProductModal.tsx`):**
+## Produk yang di-update (nama + deskripsi + manfaat + fitur + komposisi + cara pakai, ID & EN)
 
-1. On mobile, pin the close button to the viewport (fixed) instead of the modal top, so it's always visible regardless of scroll position inside the sheet. On `sm+` keep current absolute positioning inside the card.
-   - Change classes from `absolute right-4 top-4 …` to `fixed right-4 top-4 sm:absolute …` with a higher `z-20` and stronger contrast (solid background + ring + shadow) so it stands out against product photos.
+1. **Meguaz** — refresh teks (sudah cukup sesuai, penyesuaian minor).
+2. **Asmaraloka** — refresh teks (sudah sesuai).
+3. **Coco Crispy Pumpkin Seeds Original** — sesuaikan deskripsi lengkap dari doc (MOCAF, gula aren, pumpkin seeds, dipanggang tanpa pengawet).
+4. **Coco Crispy Pumkin Coklat** → rename **"Coco Crispy Pumpkin Seeds Cokelat"**, isi deskripsi/komposisi/cara pakai sesuai doc.
+5. **coco-crispy-pumkin-ubi-ungu** — TIDAK ada di doc. Rename dari duplikat "Coco Crispy Pumkin Coklat" menjadi **"Coco Crispy Pumpkin Seeds Ubi Ungu"** agar tidak bentrok nama; deskripsi dibiarkan mendekati varian original (tidak dihapus, foto tetap).
+6. **Nutralatte** → **"Nutralatte Rempah"** sebagai Minuman Serbuk Herbal (jahe, kunyit, lada hitam, gula aren, krimer nabati). Ganti kategori tetap "Pangan Fungsional".
+7. **Vitaluxe** → **"Vitaluxe Madu Rempah"** — Minuman Herbal (madu + jahe + kunyit + lada hitam), deskripsi & manfaat sesuai doc.
+8. **Nutrabite Hard Candy Rempah** → nama tetap, isi deskripsi/manfaat/komposisi/cara pakai sesuai doc.
+9. **nutrabite-milk (Spirulina)** → nama **"NutraBite Permen Susu Spirulina"**, deskripsi permen susu chewy + spirulina + madu, sesuai doc.
 
-2. Add a small visual grab handle at the top of the mobile sheet (`h-1.5 w-12 rounded-full bg-foreground/20 mx-auto mt-2 sm:hidden`) so it's clear the panel is a dismissible sheet.
+## Produk baru (belum ada di data)
 
-3. Also allow closing by tapping the backdrop (already works) — no change, but ensure the sheet has a bit of top padding on mobile so the fixed X doesn't overlap the category chip when scrolled.
+10. **NutraBite Permen Susu Rempah** — permen susu chewy dengan jahe/kunyit/lada hitam/madu. Tambah entry baru `id: "nutrabite-milk-rempah"`, brand `nutraluxe`. **Foto**: gunakan foto placeholder sementara dengan me-reuse asset yang sudah ada `@/assets/nutrabite-hard-candy-rempah.png` (foto "random" sementara sampai user memberi foto asli).
 
-**Out of scope:** No changes to Lightbox, data, i18n, or layout beyond the close-button positioning and the grab handle.
+## Yang tidak diubah
+
+- Semua path `image` produk existing tetap.
+- Produk **Were Acne Lotion** tidak ada di doc → dibiarkan apa adanya.
+- Brand list, i18n, dan komponen lain tidak disentuh.
+
+## Catatan teknis
+
+- Semua field bilingual (`id` / `en`) diisi. Bahasa Inggris diterjemahkan dari teks doc.
+- Nomor izin BPOM Meguaz & Asmaraloka tetap dicantumkan di `features`.

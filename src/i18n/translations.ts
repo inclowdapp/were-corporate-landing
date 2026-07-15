@@ -37,16 +37,8 @@ export const translations = {
     },
     mission: { id: "Misi", en: "Mission" },
     missionText: {
-      id: "1. Menghadirkan inovasi yang berangkat dari kebutuhan nyata masyarakat.
-2. Mengoptimalkan kekayaan alam Indonesia secara bertanggung jawab.
-3. Membangun kepercayaan melalui kualitas dan integritas.
-4. Bertumbuh bersama seluruh ekosistem.
-5. Menjaga keberlanjutan bagi generasi mendatang.",
-      en: "1. Delivering innovations rooted in the real needs of the community.
-2. Optimizing Indonesia's natural resources responsibly.
-3. Building trust through quality and integrity.
-4. Growing together with the entire ecosystem.
-5. Ensuring sustainability for future generations.",
+      id: "1. Menghadirkan inovasi yang berangkat dari kebutuhan nyata masyarakat.\n2. Mengoptimalkan kekayaan alam Indonesia secara bertanggung jawab.\n3. Membangun kepercayaan melalui kualitas dan integritas.\n4. Bertumbuh bersama seluruh ekosistem.\n5. Menjaga keberlanjutan bagi generasi mendatang.",
+      en: "1. Delivering innovations rooted in the real needs of the community.\n2. Optimizing Indonesia's natural resources responsibly.\n3. Building trust through quality and integrity.\n4. Growing together with the entire ecosystem.\n5. Ensuring sustainability for future generations.",
     },
     values: { id: "Nilai Kami", en: "Our Values" },
     valInnovation: { id: "Inovasi", en: "Innovation" },

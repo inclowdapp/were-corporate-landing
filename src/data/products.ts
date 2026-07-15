@@ -7,6 +7,7 @@ import nutralatterempah from "@/assets/nutralatte-rempah.png";
 import vitaluxemadu from "@/assets/vitaluxe-madu-rempah.png";
 import nutrabitehard from "@/assets/nutrabite-hard-candy-rempah.png";
 import nutrabitemilk from "@/assets/nutrabite-milk-candy-spirulina.png";
+import ichigum from "@/assets/ichigum.png";
 
 import acnelotion from "@/assets/were-acne.jpg";
 
@@ -413,7 +414,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "nutrabite-milk-rempah",
     brand: "nutraluxe",
-    image: nutrabitehard,
+    image: ichigum,
     name: "NutraBite Permen Susu Rempah",
     category: { id: "Pangan Fungsional", en: "Functional Food" },
     short: {

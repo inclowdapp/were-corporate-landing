@@ -32,13 +32,21 @@ export const translations = {
     },
     vision: { id: "Visi", en: "Vision" },
     visionText: {
-      id: "Menjadi perusahaan inovasi kesehatan terpercaya yang lahir dari kekayaan alam Indonesia.",
-      en: "To be a trusted health innovation company rooted in Indonesia's natural heritage.",
+      id: "Bertumbuh bersama dengan menghadirkan inovasi yang lahir dari kepedulian, memberikan manfaat bagi kehidupan, serta menjaga keseimbangan antara manusia dan alam.",
+      en: "Growing together by delivering innovations born of care, bringing benefits to life, and maintaining the balance between humanity and nature.",
     },
     mission: { id: "Misi", en: "Mission" },
     missionText: {
-      id: "Menghadirkan produk yang aman, efektif, dan bermakna melalui riset ilmiah dan bahan alam pilihan.",
-      en: "To deliver safe, effective, meaningful products through scientific research and selected natural ingredients.",
+      id: "1. Menghadirkan inovasi yang berangkat dari kebutuhan nyata masyarakat.
+2. Mengoptimalkan kekayaan alam Indonesia secara bertanggung jawab.
+3. Membangun kepercayaan melalui kualitas dan integritas.
+4. Bertumbuh bersama seluruh ekosistem.
+5. Menjaga keberlanjutan bagi generasi mendatang.",
+      en: "1. Delivering innovations rooted in the real needs of the community.
+2. Optimizing Indonesia's natural resources responsibly.
+3. Building trust through quality and integrity.
+4. Growing together with the entire ecosystem.
+5. Ensuring sustainability for future generations.",
     },
     values: { id: "Nilai Kami", en: "Our Values" },
     valInnovation: { id: "Inovasi", en: "Innovation" },

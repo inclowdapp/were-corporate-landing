@@ -512,11 +512,11 @@ function WhyUs() {
 
 // ---------- Testimonials ----------
 const TESTIMONIALS = [
-  { name: "Rina W.", city: "Yogyakarta", quote: { id: "Meguaz benar-benar membantu menjaga stamina saya sebagai ibu bekerja.", en: "Meguaz truly helps maintain my stamina as a working mom." } },
+  { name: "Sari L.", city: "Yogyakarta", quote: { id: "Meguaz benar-benar membantu menjaga stamina saya sebagai ibu bekerja.", en: "Meguaz truly helps maintain my stamina as a working mom." } },
   { name: "Andi S.", city: "Makassar", quote: { id: "Coco Crispy jadi camilan favorit anak-anak, sehat dan enak.", en: "Coco Crispy became my kids' favorite snack — healthy and tasty." } },
   { name: "Dewi P.", city: "Bandung", quote: { id: "Kulit saya terasa lebih tenang sejak pakai Were Acne Lotion.", en: "My skin feels calmer since I started using Were Acne Lotion." } },
   { name: "Bagas H.", city: "Jakarta", quote: { id: "Pelayanan ramah, produk premium. Nutralatte enak banget!", en: "Friendly service, premium products. Nutralatte tastes amazing!" } },
-  { name: "Sari L.", city: "Surabaya", quote: { id: "Asmaraloka membantu saya merasa lebih seimbang setiap hari.", en: "Asmaraloka helps me feel more balanced every day." } },
+  { name: "Rina W.", city: "Surabaya", quote: { id: "Asmaraloka membantu saya merasa lebih seimbang setiap hari.", en: "Asmaraloka helps me feel more balanced every day." } },
 ];
 
 function Testimonials() {

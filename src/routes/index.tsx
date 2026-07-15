@@ -31,7 +31,7 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { CompanyVideo } from "@/components/site/CompanyVideo";
 
 import heroBg from "@/assets/hero-bg.jpg";
-import aboutLab from "@/assets/about-lab.jpg";
+import aboutLab from "@/assets/about-lab-were.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,

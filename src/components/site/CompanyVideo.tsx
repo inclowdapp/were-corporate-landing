@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { useLang } from "@/i18n/LanguageProvider";
-import heroBg from "@/assets/hero-bg.jpg";
 import companyVideo from "@/assets/video-company.mp4";
 
 // Ganti file `src/assets/video-company.mp4` untuk memperbarui video company profile.
@@ -43,7 +42,6 @@ export function CompanyVideo() {
               controls
               preload="metadata"
               playsInline
-              poster={heroBg}
             >
               <source src={COMPANY_VIDEO_URL} type="video/mp4" />
               {lang === "id"

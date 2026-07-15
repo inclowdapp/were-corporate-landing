@@ -8,7 +8,7 @@ import vitaluxemadu from "@/assets/vitaluxe-madu-rempah.png";
 import nutrabitehard from "@/assets/nutrabite-hard-candy-rempah.png";
 import nutrabitemilk from "@/assets/nutrabite-milk-candy-spirulina.png";
 
-import acnelotion from "@/assets/product-acnelotion.jpg";
+import acnelotion from "@/assets/were-acne.jpg";
 
 export type BrandKey = "bioherluxe" | "nutraluxe" | "were";
 

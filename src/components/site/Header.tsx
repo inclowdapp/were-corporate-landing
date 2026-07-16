@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useLang } from "@/i18n/LanguageProvider";
 import { waLink } from "@/data/site";
+import logoAsset from "@/assets/logo-were.png.asset.json";
 
 const sections = ["home", "about", "brands", "products", "testimonials", "contact"] as const;
 
@@ -39,10 +40,11 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <button onClick={() => go("home")} className="flex items-center gap-2" aria-label="Were home">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-primary text-primary-foreground font-display text-lg font-bold">
-            W
-          </span>
-          <span className="font-display text-xl font-semibold tracking-tight text-foreground">Were</span>
+          <img
+            src={logoAsset.url}
+            alt="Were"
+            className="h-12 w-auto object-contain"
+          />
         </button>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">

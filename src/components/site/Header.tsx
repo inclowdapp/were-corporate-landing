@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { useLang } from "@/i18n/LanguageProvider";
 import { waLink } from "@/data/site";
+import logoAsset from "@/assets/logo-were.png.asset.json";
 
 const sections = ["home", "about", "brands", "products", "testimonials", "contact"] as const;
 

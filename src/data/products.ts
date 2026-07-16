@@ -8,6 +8,7 @@ import vitaluxemadu from "@/assets/vitaluxe-madu-rempah.png";
 import nutrabitehard from "@/assets/nutrabite-hard-candy-rempah.png";
 import nutrabitemilk from "@/assets/nutrabite-milk-candy-spirulina.png";
 import nutrabitemilkrempah from "@/assets/nutrabite-milk-candy-rempah.png";
+import ichigum from "@/assets/ichigum.png";
 
 import acnelotion from "@/assets/were-acne.jpg";
 
@@ -519,6 +520,59 @@ export const PRODUCTS: Product[] = [
     howto: {
       id: "Nikmati 1–2 butir NutraBite kapan saja. Simpan di tempat sejuk dan kering.",
       en: "Enjoy 1–2 NutraBite candies any time. Store in a cool, dry place.",
+    },
+  },
+  {
+    id: "ichibite-hard-candy",
+    brand: "nutraluxe",
+    image: ichigum,
+    name: "IchiBite Hard Candy",
+    category: { id: "Pangan Fungsional", en: "Functional Food" },
+    short: {
+      id: "Permen keras dengan isian cokelat dan kacang Sacha Inchi.",
+      en: "Hard candy filled with chocolate and Sacha Inchi nuts.",
+    },
+    description: {
+      id: "IchiBite Hard Candy Rempah merupakan inovasi permen keras yang menghadirkan perpaduan cita rasa rempah dengan kejutan isian cokelat dan kacang Sacha Inchi di bagian tengah. Diperkaya dengan madu sebagai pemanis, IchiBite memberikan sensasi manis yang seimbang, hangat dari rempah, serta kelezatan cokelat dan kacang dalam setiap gigitan. Kacang Sacha Inchi (Plukenetia volubilis) dikenal sebagai sumber alami protein nabati serta lemak tak jenuh, termasuk omega-3, omega-6, dan omega-9.",
+      en: "IchiBite Hard Candy Spice is an innovative hard candy that blends warm spice flavors with a surprise chocolate and Sacha Inchi nut filling at its center. Enriched with honey as a sweetener, IchiBite delivers balanced sweetness, warm spice notes, and the delight of chocolate and nuts in every bite. Sacha Inchi nuts (Plukenetia volubilis) are known as a natural source of plant protein and unsaturated fats, including omega-3, omega-6, and omega-9.",
+    },
+    benefits: {
+      id: [
+        "Mengandung kacang Sacha Inchi sebagai sumber nutrisi alami.",
+        "Dipadukan dengan madu untuk rasa manis yang lebih alami.",
+        "Memberikan sensasi hangat dengan isian cokelat yang lezat.",
+        "Praktis dinikmati kapan saja sebagai camilan atau teman beraktivitas.",
+      ],
+      en: [
+        "Contains Sacha Inchi nuts as a natural source of nutrition.",
+        "Combined with honey for a more natural sweetness.",
+        "Delivers a warm sensation with a delicious chocolate filling.",
+        "Convenient to enjoy any time as a snack or activity companion.",
+      ],
+    },
+    features: {
+      id: [
+        "Hard candy dengan isian cokelat dan kacang Sacha Inchi",
+        "Menggunakan madu sebagai pemanis",
+        "Perpaduan rasa rempah, cokelat, dan kacang yang unik",
+        "Tekstur renyah di luar, lembut di dalam",
+        "Praktis dibawa dan dinikmati kapan saja",
+      ],
+      en: [
+        "Hard candy filled with chocolate and Sacha Inchi nuts",
+        "Sweetened with honey",
+        "A unique blend of spice, chocolate, and nut flavors",
+        "Crunchy outside, soft inside",
+        "Convenient to carry and enjoy any time",
+      ],
+    },
+    ingredients: {
+      id: "Madu, cokelat, kacang Sacha Inchi (Plukenetia volubilis).",
+      en: "Honey, chocolate, Sacha Inchi nuts (Plukenetia volubilis).",
+    },
+    howto: {
+      id: "Hisap IchiBite hingga lapisan hard candy perlahan larut, lalu nikmati kejutan isian cokelat dan kacang Sacha Inchi di bagian tengah. Simpan di tempat sejuk dan kering, hindari sinar matahari langsung.",
+      en: "Suck IchiBite until the hard candy shell slowly dissolves, then enjoy the surprise chocolate and Sacha Inchi filling at the center. Store in a cool, dry place, away from direct sunlight.",
     },
   },
   {

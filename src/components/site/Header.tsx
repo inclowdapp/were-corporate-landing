@@ -43,7 +43,7 @@ export function Header() {
           <img
             src={logoAsset.url}
             alt="Were"
-            className="h-10 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
         </button>
 

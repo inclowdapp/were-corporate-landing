@@ -41,7 +41,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <button onClick={() => go("home")} className="flex items-center gap-2" aria-label="Were home">
           <img
-            src={logoAsset.url}
+            src={logoAsset}
             alt="Were"
             className="h-12 w-auto object-contain"
           />
